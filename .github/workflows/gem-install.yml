@@ -23,6 +23,8 @@ jobs:
       image: "larskanis/rake-compiler-dock-mri-x86_64-linux:1.1.0"
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: true
       - uses: actions/cache@v2
         with:
           path: ports/archives
@@ -45,6 +47,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: true
       - uses: MSP-Greg/setup-ruby-pkgs@v1
         with:
           ruby-version: "${{matrix.ruby}}"
@@ -64,6 +68,8 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: true
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.0"
@@ -82,6 +88,8 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: true
       - uses: MSP-Greg/setup-ruby-pkgs@v1
         with:
           ruby-version: "3.0"
@@ -107,6 +115,8 @@ jobs:
       image: "larskanis/rake-compiler-dock-mri-${{matrix.plat}}:1.1.0"
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: true
       - uses: actions/cache@v2
         with:
           path: ports/archives
@@ -128,6 +138,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: true
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "${{matrix.ruby}}"
@@ -146,6 +158,8 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: true
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "${{matrix.ruby}}"
@@ -183,6 +197,8 @@ jobs:
       image: "larskanis/rake-compiler-dock-jruby:1.1.0"
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: true
       - run: ./scripts/test-gem-build gems java
       - uses: actions/upload-artifact@v2
         with:
@@ -199,6 +215,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: true
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "${{matrix.ruby}}"
