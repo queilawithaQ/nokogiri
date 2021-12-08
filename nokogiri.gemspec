@@ -316,7 +316,7 @@ Gem::Specification.new do |spec|
   spec.rdoc_options = ["--main", "README.md"]
 
   spec.add_runtime_dependency("racc", "~> 1.4")
-  spec.add_runtime_dependency("mini_portile2", "~> 2.6.1") unless java_p # keep version in sync with extconf.rb
+  spec.add_runtime_dependency("mini_portile2", ">= 2.6.1", "< 2.8.0") unless java_p # keep version in sync with extconf.rb
 
   spec.add_development_dependency("bundler", "~> 2.2")
   spec.add_development_dependency("hoe-markdown", "~> 1.4")
