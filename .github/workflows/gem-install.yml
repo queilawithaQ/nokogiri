@@ -49,7 +49,7 @@ jobs:
         with:
           ruby-version: "${{matrix.ruby}}"
           apt-get: "libxml2-dev libxslt1-dev pkg-config"
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: cruby-gem
           path: gems
@@ -67,7 +67,7 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.0"
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: cruby-gem
           path: gems
@@ -86,7 +86,7 @@ jobs:
         with:
           ruby-version: "3.0"
           mingw: "libxml2 libxslt"
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: cruby-gem
           path: gems
@@ -131,7 +131,7 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "${{matrix.ruby}}"
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: cruby-x86_64-linux-gem
           path: gems
@@ -149,7 +149,7 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "${{matrix.ruby}}"
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: cruby-x86_64-darwin-gem
           path: gems
@@ -166,7 +166,7 @@ jobs:
       - uses: MSP-Greg/setup-ruby-pkgs@v1
         with:
           ruby-version: "${{matrix.ruby}}"
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: cruby-x64-mingw32-gem
           path: gems
@@ -202,7 +202,7 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "${{matrix.ruby}}"
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: jruby-gem
           path: gems
